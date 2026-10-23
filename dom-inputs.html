@@ -26,5 +26,21 @@
     <input type="number" id="num2" name="n2" placeholder="Digite o segundo número">
     <input type="button" id="num3" value="Somar">
     <div id="res">Resultado</div>
+
+    <script>
+        let num1 = document.querySelector('#num1');
+        let num2 = document.querySelector('#num2');
+        let num3 = document.querySelector('#num3');
+        let res = document.querySelector('#res');
+
+        num3.addEventListener('click', somar);
+
+        function somar(){
+            let n1 = Number(num1.value);
+            let n2 = Number(num2.value);
+            let soma = n1 + n2;
+            res.innerHTML = `Resultado: ${soma} é a soma de ${n1} + ${n2}`;
+        }
+    </script>
 </body>
 </html>
